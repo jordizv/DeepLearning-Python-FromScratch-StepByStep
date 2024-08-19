@@ -10,10 +10,12 @@ In addition, various optimizations have been made and the performance compared.
 
 * In one hand,  A high 'bias' tends to make simplified assumptions about the data, which can lead to the model not capturing the complexity of the data well.
 * In the other hand, the 'variance' measures the sensitivity of the model to small variations in training data. A model with high variance is highly complex 
-and adapts very well to the training dataset, even capturing noise. However, this high sensitivity can lead to overfitting, where the model performs excellently in the training set but fails to generalize well to new, unseen data.
+and adapts very well to the training dataset, even capturing noise.
 
-Example:
-<img src="explanations_utils/2020-10-16-bias-and-variance-summary-overview.png" alt="Example of how fits either high bias or high variance">
+However, this high sensitivity can lead to overfitting, where the model performs excellently in the training set but fails to generalize well to new, unseen data. Example:
+
+
+<img src="https://github.com/Jordi17z/DeepLearning-Python/blob/main/explanations_utils/2020-10-16-bias-and-variance-10-summary-overview.png" alt="Example of how fits either high bias or high variance" width="800">
 
 To address the problem of overfitting, we can take more data to train (if we can) or implement regularization techniques that try to reduce it. (in optimization_code you will see some)
 
