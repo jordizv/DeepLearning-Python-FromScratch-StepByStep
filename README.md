@@ -13,7 +13,7 @@ In addition, various optimizations have been made and the performance compared.
 and adapts very well to the training dataset, even capturing noise. However, this high sensitivity can lead to overfitting, where the model performs excellently in the training set but fails to generalize well to new, unseen data.
 
 Example:
-
+<img src="explanations_utils/2020-10-16-bias-and-variance-summary-overview.png" alt="Example of how fits either high bias or high variance">
 
 To address the problem of overfitting, we can take more data to train (if we can) or implement regularization techniques that try to reduce it. (in optimization_code you will see some)
 
