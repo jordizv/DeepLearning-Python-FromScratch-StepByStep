@@ -1,39 +1,47 @@
-# Deep Learning project on Python
+# Deep Learning from Scratch: Step-by-Step Guide
 
-### Small python project in which an artificial neural network is implemented step by step without frameworks. The idea is to capture the theoretical part of Deep Learning on the code.
+Welcome to the **Deep Learning Python from Scratch** project. This repository demonstrates the implementation of a deep learning model **step by step** using only Python and fundamental libraries like `numpy`—without relying on any high-level deep learning frameworks such as TensorFlow or PyTorch.
 
-In addition, various optimizations have been made and the performance compared.
+---
 
-# Some basics concepts before going:
+## 🧠 Key Features
 
-## Bias and Variance in a Deep Neural Network:
+1. **Step-by-Step Implementation**  
+   - The notebook breaks down each stage of building a neural network, from initializing parameters to optimizing the loss function.
+   - Each step is explained: equations, and visualizations for clarity.
 
-* In one hand,  A high 'bias' tends to make simplified assumptions about the data, which can lead to the model not capturing the complexity of the data well.
-* In the other hand, the 'variance' measures the sensitivity of the model to small variations in training data. A model with high variance is highly complex 
-and adapts very well to the training dataset, even capturing noise.
+2. **Built from Scratch**  
+   - No high-level libraries like TensorFlow or PyTorch are used. Instead, all computations are implemented manually using `numpy`.
+   - This ensures a deep understanding of how deep learning works at low level.
 
-However, this high sensitivity can lead to overfitting, where the model performs excellently in the training set but fails to generalize well to new, unseen data. Example:
+3. **Educational Focus**  
+   - Ideal for beginners who want to learn the fundamentals.
+   - Great for developers looking to strengthen their understanding of deep learning theory and implementation.
 
+---
 
-<img src="https://github.com/Jordi17z/DeepLearning-Python/blob/main/explanations_utils/2020-10-16-bias-and-variance-10-summary-overview.png" alt="Example of how fits either high bias or high variance" width="800">
+## 🗂️ Project Structure
+```
+├── Datasets/                   # Data: divided in train, test, validation
+├── explanations_utils/         # Resources for explaining in Jupyter (Ignore)
+├── parameters_saved/           # Parameters of the model, once trained can be saved
+├── utils/                      # Python code functions (auxiliary)
+├── optimization_code.ipynb     # Methods to optimize main model
+├── project.ipynb               # Main project and model
+```
 
-To address the problem of overfitting, we can take more data to train (if we can) or implement regularization techniques that try to reduce it. (in optimization_code you will see some)
+---
 
-## Vanishing/Exploding Gradient Problem:
-Both Vanishing and Exploding involves how gradients propagate through the network during training and affects. 
+## 📊 Dataset and Objective
 
-* Vanishing gradient occurs when the gradients become extremely small during training, especially in the deepest layers, the model may end up stuck and deeper layers don't train well.
-* Exploding gradient is the opposit: gradients become extremely large. This can make the model become unstable and the model can diverge instead of converge, i.e., instead of improving, its performance get worse.
+- Dataset Sources:
 
-And how the gradient become extremely small or large? 
+    - The training data for this project is sourced from:
+        - The cats_vs_dogs catalog of TensorFlow (for cat images).
+        - A dataset from Kaggle (for non-cat images).
 
-* In Vanishing as gradients propagate from the output layer to the deeper layers (closer to the input), gradients can be multiplied by values less than 1 (if the trigger function, 
-such as Sigmoid or Tanh, saturates at the ends).
+- Objective:
 
-* In Exploding, if gradients are multiplied by values greater than 1 repeatedly (especially in very deep networks), they can grow exponentially as they propagate into deeper layers.
+    - This project is focused on implementing and understanding the fundamental workings of a neural network, rather than achieving state-of-the-art results.
 
-
-
-#### Finally, the training data has been obtained from the '*cats_vs_dogs*' catalog of TensorFlow (for cats) and from *Kaggle* (not cats).
-
-#### This neural network is small and simple, along with a small training dataset. The objective is not the result itself, but the implementation and understanding of how it works.
+    - The dataset and neural network are intentionally kept small and simple to prioritize educational value over accuracy or performance, Also, we do not make use of parallelism. (poor performance in training speed).
